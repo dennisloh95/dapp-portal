@@ -1,4 +1,4 @@
-import { mainnet, sepolia } from "@wagmi/core/chains";
+import { holesky, mainnet, sepolia } from "@wagmi/core/chains";
 
 import Hyperchains from "@/hyperchains/config.json";
 
@@ -16,6 +16,10 @@ export const l1Networks = {
   sepolia: {
     ...sepolia,
     name: "Ethereum Sepolia Testnet",
+  },
+  holesky: {
+    ...holesky,
+    name: "Holesky",
   },
 } as const;
 export type L1Network = Chain;
@@ -66,37 +70,12 @@ export const dockerizedNode: ZkSyncNetwork = {
 
 const publicChains: ZkSyncNetwork[] = [
   {
-    id: 324,
-    key: "mainnet",
-    name: "zkSync",
-    rpcUrl: "https://mainnet.era.zksync.io",
-    blockExplorerUrl: "https://era.zksync.network",
-    blockExplorerApi: "https://block-explorer-api.mainnet.zksync.io",
-    displaySettings: {
-      showPartnerLinks: true,
-    },
-    l1Network: l1Networks.mainnet,
-  },
-  {
-    id: 300,
-    key: "sepolia",
-    name: "zkSync Sepolia Testnet",
-    rpcUrl: "https://sepolia.era.zksync.dev",
-    blockExplorerUrl: "https://sepolia-era.zksync.network",
-    blockExplorerApi: "https://block-explorer-api.sepolia.zksync.dev",
-    displaySettings: {
-      showPartnerLinks: true,
-    },
-    l1Network: l1Networks.sepolia,
-  },
-  {
-    id: 270,
-    key: "stage",
-    name: "zkSync Stage",
-    rpcUrl: "https://z2-dev-api.zksync.dev",
-    blockExplorerUrl: "https://sepolia-beta.staging-scan-v2.zksync.dev",
-    blockExplorerApi: "https://block-explorer-api.stage.zksync.dev",
-    l1Network: l1Networks.sepolia,
+    id: 5041,
+    key: "zk-holesky-mantle-qa",
+    name: "zk-holesky-mantle-qa",
+    rpcUrl: "http://35.187.229.9:3050",
+    blockExplorerUrl: "http://52.221.180.160:3010",
+    l1Network: l1Networks.holesky,
     hidden: true,
   },
 ];
