@@ -69,6 +69,18 @@ export const dockerizedNode: ZkSyncNetwork = {
 };
 
 const publicChains: ZkSyncNetwork[] = [
+  // {
+  //   id: 300,
+  //   key: "sepolia",
+  //   name: "zkSync Sepolia Testnet",
+  //   rpcUrl: "https://sepolia.era.zksync.dev",
+  //   blockExplorerUrl: "https://sepolia-era.zksync.network",
+  //   blockExplorerApi: "https://block-explorer-api.sepolia.zksync.dev",
+  //   displaySettings: {
+  //     showPartnerLinks: true,
+  //   },
+  //   l1Network: l1Networks.sepolia,
+  // },
   {
     id: 5041,
     key: "zk-holesky-mantle-qa",
